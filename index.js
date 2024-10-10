@@ -25,7 +25,7 @@ async function main() {
 
         switch (choice) {
 
-            case 'View all departments':
+            case 'View all Departments':
                 await viewAllDepartments();
                 break;
 
@@ -37,7 +37,7 @@ async function main() {
                 await viewAllEmployees();
                 break;
 
-            case 'View Empoloyees by Manager':
+            case 'View Employees by Manager':
                 await viewEmployeesByManager();
                 break;
 
@@ -223,7 +223,7 @@ async function main() {
                     ]);
                     await deleteEmployee(employeeIdForDelete);
                     break;
-                    
+
                 case 'Exit':
                     exit = true;
                     break;
