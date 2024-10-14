@@ -3,9 +3,9 @@ CREATE DATABASE employee_db;
 
 \c employee_db;
 
-DROP TABLE IF EXISTS department;
-DROP TABLE IF EXISTS role;
 DROP TABLE IF EXISTS employee;
+DROP TABLE IF EXISTS role;
+DROP TABLE IF EXISTS department;
 
 CREATE TABLE department (
     id SERIAL PRIMARY KEY,
@@ -31,7 +31,7 @@ CREATE TABLE employee (
 );
 
 ALTER TABLE role
-DROP CONTSRAINT IF EXISTS role_department_id_fkey;
+DROP CONSTRAINT IF EXISTS role_department_id_fkey;
 
 ALTER TABLE role
 ADD CONSTRAINT role_department_id_fkey

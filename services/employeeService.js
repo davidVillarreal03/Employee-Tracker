@@ -22,7 +22,7 @@ async function updateEmployeeRole(employee_id, role_id) {
 
 async function updateEmployeeManager(employee_id, manager_id) {
     await client.query('UPDATE employee SET manager_id = $1 WHERE id = $2', [manager_id, employee_id]);
-    cconsole.log('Updated employee\'s manager');
+    console.log('Updated employee\'s manager');
 }
 
 async function deleteEmployee(employee_id) {
