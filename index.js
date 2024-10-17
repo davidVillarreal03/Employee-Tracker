@@ -1,5 +1,6 @@
 const inquirer = require('inquirer');
 
+const client = require('./config/db');
 const { homeMenu } = require('./prompts/inquirerPrompts');
 
 const { viewAllDepartments, addDepartment, deleteDepartment } = require('./services/departmentService');
@@ -14,9 +15,8 @@ const { viewAllEmployees,
         viewEmployeesByManager, 
         viewEmployeesByDepartment } = require('./services/employeeService');
 
-const { viewBudget } = require('./services/budgetService');
+const { viewBudgetForDepartment } = require('./services/budgetService');
 
-const client = require('./config/db');
 
 async function main() {
     let exit = false;
@@ -58,7 +58,7 @@ async function main() {
                     message: 'Select a department',
                     choices: departmentChoices
                 });
-                await viewBudget(selectedDepartmentId);
+                await viewBudgetForDepartment(selectedDepartmentId);
                 break;
 
             case 'Add Department':
