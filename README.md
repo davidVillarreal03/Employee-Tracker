@@ -7,6 +7,7 @@
 ## Description
 
 The application will allow business owners to view and manage thier company assets using Node.js, Inquirer and PostgreSQL.
+See an example [here.](https://youtu.be/x8zlpm7RXys?si=TtRxvJAF9zCqi_4F)
 
 ## Table of Contents (Optional)
 
